@@ -17,6 +17,23 @@ weatherForm.addEventListener("submit", (e) => {
   messageThree.textContent = "";
   messageFour.textContent = "";
 
+  //this code is when we run application on localhost
+  //   fetch(`http://localhost:3000/weather?address= ${location}`).then(
+  //     (response) => {
+  //       response.json().then((data) => {
+  //         if (data.error) {
+  //           messageOne.textContent = data.error;
+  //         } else {
+  //           messageOne.textContent = location;
+  //           messageTwo.textContent = data.location;
+  //           messageThree.textContent = data.status;
+  //           messageFour.textContent = data.forecast;
+  //         }
+  //       });
+  //     }
+  //   );
+
+  //this line is when we run app on heroku app
   fetch(`http://localhost:3000/weather?address= ${location}`).then(
     (response) => {
       response.json().then((data) => {
